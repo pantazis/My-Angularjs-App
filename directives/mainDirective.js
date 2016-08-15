@@ -6,15 +6,15 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
             url: "/",
-            templateUrl: 'add-person.html'
+            templateUrl: 'views/add-person.html'
         })
         .state('Contact', {
             url: "/contact",
-            templateUrl: 'form.html'
+            templateUrl: 'views/form.html'
         })
         .state('about', {
             url: "/about",
-            templateUrl: 'form.html'
+            templateUrl: 'views/form.html'
         });
 });
 
