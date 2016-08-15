@@ -8,9 +8,9 @@
     var adde = SC.get("/tracks", {limit: 1});
          console.log(adde);
        
-   /* SC.get("/tracks", {limit: 1}, function(tracks){
+    SC.get("/tracks", {limit: 10}, function(tracks){
        
-      var track = tracks[0];
+      var track = tracks[2];
         console.log(track);
       SC.oEmbed(track.uri, document.getElementById("track"));
     });*/
