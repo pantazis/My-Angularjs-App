@@ -6,6 +6,7 @@
     $("#loadTracks").on("click", function(){
         console.log("hello");
     var adde = SC.get("/tracks", {limit: 1});
+         console.log(adde);
        
    /* SC.get("/tracks", {limit: 1}, function(tracks){
        
