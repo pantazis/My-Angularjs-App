@@ -11,6 +11,7 @@
      SC.get("/tracks", {
          limit: 10
      }, function (tracks) {
+         console.log("hello");
 
          var track = tracks[2];
          console.log(track);
