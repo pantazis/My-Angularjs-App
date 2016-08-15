@@ -4,7 +4,7 @@
  });
 
  $("#loadTracks").on("click", function () {
-     console.log(SC.get);
+     console.log(SC.statusText);
      
     
 
