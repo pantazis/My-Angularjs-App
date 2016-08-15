@@ -8,7 +8,7 @@ var asutis = SC.get('/resolve', {
   url: 'https://soundcloud.com/hbrideacast'
 });
     console.log(asutis);
-});
+
  /* SC.get('/user/183/tracks').then(function(tracks){
   alert('Latest track: ' + tracks[0].title);
 });*/
