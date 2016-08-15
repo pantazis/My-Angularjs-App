@@ -3,7 +3,7 @@
     redirect_uri: 'https://pantazis.github.io/My-Angularjs-App/callback.html'
   });
     
-    $("#loadTracks").live("click", function(){
+    $("#loadTracks").on("click", function(){
     SC.get("/tracks", {limit: 1}, function(tracks){
       var track = tracks[0];
       SC.oEmbed(track.uri, document.getElementById("track"));
