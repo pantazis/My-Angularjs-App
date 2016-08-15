@@ -9,6 +9,7 @@
     SC.get("/tracks", {limit: 1}, function(tracks){
        
       var track = tracks[0];
+        console.log(track);
       SC.oEmbed(track.uri, document.getElementById("track"));
     });
   });
