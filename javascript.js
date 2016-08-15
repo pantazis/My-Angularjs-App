@@ -7,6 +7,7 @@ window.onload = function () {
 SC.get('/resolve', {
   url: 'https://soundcloud.com/hbrideacast'
 }, function(user) {
+    console.log("asasasasa");
   console.log(user.id);
 });
  /* SC.get('/user/183/tracks').then(function(tracks){
