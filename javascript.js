@@ -5,6 +5,7 @@
     
     $("#loadTracks").on("click", function(){
     SC.get("/tracks", {limit: 1}, function(tracks){
+        console.log(SC.get());
       var track = tracks[0];
       SC.oEmbed(track.uri, document.getElementById("track"));
     });
