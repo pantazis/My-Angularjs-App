@@ -1,19 +1,12 @@
- SC.initialize({
-     client_id: '7fcf1c871e016ce004ecc1dcbb520d08',
-     redirect_uri: 'https://pantazis.github.io/My-Angularjs-App/callback.html'
- });
+window.onload = function () {
+    var SC = require('soundcloud');
+    SC.initialize({
+        client_id: '7fcf1c871e016ce004ecc1dcbb520d08',
+        redirect_uri: 'https://pantazis.github.io/My-Angularjs-App/callback'
+    });
 
-          
-
-  SC.connect().then(function() {
-  console.log(SC.get('/me'));
-});
-
-
-window.onunload =function(){
-      SC.connect().then(function() {
-  console.log(SC.get('/me'));
+  SC.get('/user/183/tracks').then(function(tracks){
+  alert('Latest track: ' + tracks[0].title);
 });
 };
-
 
