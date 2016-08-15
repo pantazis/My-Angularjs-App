@@ -8,12 +8,12 @@
      
     
 
-     SC.get("/tracks", {
-         limit: 10
+     SC.get("/users/cokestudio/tracks", {
+         limit: 5
      }, function (tracks) {
          console.log("hello");
 
-         var track = tracks[2];
+         var track = tracks[0];
          console.log(track);
          SC.oEmbed(track.uri, document.getElementById("track"));
      });
