@@ -5,7 +5,7 @@ window.onload = function () {
         redirect_uri: 'https://pantazis.github.io/My-Angularjs-App/callback'
     });
 SC.get('/resolve', {
-  url: 'https://soundcloud.com/paulosman'
+  url: 'https://soundcloud.com/hbrideacast'
 }, function(user) {
   console.log(user.id);
 });
