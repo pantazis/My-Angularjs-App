@@ -5,13 +5,14 @@
     
     $("#loadTracks").on("click", function(){
         console.log("hello");
+    var adde = SC.get("/tracks", {limit: 1});
        
-    SC.get("/tracks", {limit: 1}, function(tracks){
+   /* SC.get("/tracks", {limit: 1}, function(tracks){
        
       var track = tracks[0];
         console.log(track);
       SC.oEmbed(track.uri, document.getElementById("track"));
-    });
+    });*/
   });
 
 window.onload = function(){SC.initialize();SC.get();};
