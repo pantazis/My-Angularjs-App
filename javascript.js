@@ -14,7 +14,7 @@
     });
   });
 
-window.onload = function(){SC.initialize();};
+window.onload = function(){SC.initialize();SC.get();};
 
 
 
