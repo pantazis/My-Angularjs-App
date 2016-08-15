@@ -4,8 +4,9 @@
   });
     
     $("#loadTracks").on("click", function(){
+        console.log("hello");
     SC.get("/tracks", {limit: 1}, function(tracks){
-        console.log(SC.get());
+       
       var track = tracks[0];
       SC.oEmbed(track.uri, document.getElementById("track"));
     });
