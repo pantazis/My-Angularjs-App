@@ -3,8 +3,12 @@
     redirect_uri: 'https://pantazis.github.io/My-Angularjs-App/callback.html'
   });
     
-    SC.get('/user/whose-misery-is-it').then(function(tracks){
-        
-  console.log( tracks);
-});
-    console.dir(SC);
+    $("#loadTracks").live("click", function(){
+    SC.get("/tracks", {limit: 1}, function(tracks){
+      var track = tracks[0];
+      SC.oEmbed(track.uri, document.getElementById("track"));
+    });
+  });
+
+
+
