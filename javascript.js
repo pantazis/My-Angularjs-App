@@ -3,8 +3,8 @@
     redirect_uri: 'https://pantazis.github.io/My-Angularjs-App/callback.html'
   });
     
-    SC.get('/msmrsounds/tracks').then(function(tracks){
+    SC.get('/user/whose-misery-is-it').then(function(tracks){
         
-  console.log('Latest track: ' + tracks[0].title);
+  console.log( tracks[]);
 });
-    console.log(SC);
+    console.dir(SC);
