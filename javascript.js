@@ -5,6 +5,6 @@
     
     SC.get('/user/whose-misery-is-it').then(function(tracks){
         
-  console.log( tracks[]);
+  console.log( tracks);
 });
     console.dir(SC);
