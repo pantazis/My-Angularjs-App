@@ -21,5 +21,9 @@ function getMusic(genre){
         console.log(tracks);
     });
 };
+getMusic('punk');
+
+
+
 
 
