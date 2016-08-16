@@ -9,8 +9,8 @@ var asutis = SC.get('/resolve', {
 });
     console.log(asutis.id);
 
- SC.get('/user/37590655/tracks').then(function(tracks){
+ /*SC.get('/user/37590655/tracks').then(function(tracks){
   alert('Latest track: ' + tracks[0].title);
-});
+});*/
 };
 
