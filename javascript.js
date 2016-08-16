@@ -14,14 +14,12 @@
 
  console.log(SC.get('/tracks/13158655'));
 
-SC.put('/me', {
-  user: { description: 'I am using the SoundCloud API!' }
-}).then(function(){
-  return SC.get('/me');
-}).then(function(me){
-  console.log(me.description);
-}).catch(function(error){
-  alert('Error: ' + error.message);
-});
+function getMusic(genre){
+    SC.get("tracks",{
+        genres:genre
+    },function(tracks){
+        console.log(tracks);
+    });
+};
 
 
