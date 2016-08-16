@@ -7,10 +7,10 @@ window.onload = function () {
 var asutis = SC.get('/resolve', {
   url: 'https://soundcloud.com/hbrideacast'
 });
-    console.log(asutis);
+    console.log(asutis.id);
 
- /* SC.get('/user/183/tracks').then(function(tracks){
+ SC.get('/user/37590655/tracks').then(function(tracks){
   alert('Latest track: ' + tracks[0].title);
-});*/
+});
 };
 
