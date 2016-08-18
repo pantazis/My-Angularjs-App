@@ -34,7 +34,8 @@
                     o.set("oauth_token", t.oauth_token), o.set("client_id", t.client_id), o.set("redirect_uri", t.redirect_uri), o.set("baseURL", t.baseURL), o.set("connectURL", t.connectURL)
                 },
                 get: function (t, e) {
-                    return i.request("GET", t, e)
+                    return i.request("GET", t, e);
+                    console.log(i.request);
                 },
                 post: function (t, e) {
                     return i.request("POST", t, e)
