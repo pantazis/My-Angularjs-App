@@ -32,10 +32,13 @@ SC.get("charts", {
 var invocation = new XMLHttpRequest();
 // Internet Explorer uses a propritary object called XDomainRequest
 var url = "https://api-v2.soundcloud.com/charts?kind=top&genre=soundcloud:genres:ambient&client_id=7fcf1c871e016ce004ecc1dcbb520d08";
+
 function callOtherDomain() {
     if (invocation) {
         invocation.open('GET', url, true);
-        invocation.onreadystatechange = function(console.log("hello"));
+        invocation.onreadystatechange = function () {
+            console.log("hello")
+        };
         invocation.send();
     }
 }
