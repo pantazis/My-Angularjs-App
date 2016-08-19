@@ -35,7 +35,7 @@ var url = "https://api-v2.soundcloud.com/charts?kind=top&genre=soundcloud:genres
 function callOtherDomain() {
     if (invocation) {
         invocation.open('GET', url, true);
-        invocation.onreadystatechange = function(console.log("hello");
+        invocation.onreadystatechange = function(console.log("hello"));
         invocation.send();
     }
 }
