@@ -35,7 +35,6 @@
                 },
                 get: function (t, e) {
                     return i.request("GET", t, e)
-                   
                 },
                 post: function (t, e) {
                     return i.request("POST", t, e)
@@ -432,7 +431,7 @@
         "use strict";
         var n = {
             oauth_token: void 0,
-            baseURL: "https://api-v2.soundcloud.com",
+            baseURL: "https://api.soundcloud.com",
             connectURL: "//connect.soundcloud.com",
             client_id: void 0,
             redirect_uri: void 0
@@ -2188,8 +2187,8 @@
                 return n && typeof encodeURIComponent != k ? encodeURIComponent(t) : t
             }
             /*!    SWFObject v2.3.20130521 <http://github.com/swfobject/swfobject>
-                        is released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
-                    */
+            		    is released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
+            		*/
             var P, I, L, O, R, D, M, k = "undefined",
                 N = "object",
                 x = "Shockwave Flash",
@@ -7406,7 +7405,7 @@
             t.exports = n
         }, function (t, e, n) {
             function i() {
-                return this.scAudio.controller ? this.controller ? void m.warn("(%s) Setup was called while it was already initialized (returned with a no-op)", this.scAudio.getId()) : (m("(%s) Initialized", this.scAudio.getId()), this.controller = this.scAudio.controller, this.protocol = this.scAudio.streamInfo.protocol, void(this.host = S.getUrlHost(this.scAudio.streamInfo.url))) : void m.warn("Can´t initialize when controller is null")
+                return this.scAudio.controller ? this.controller ? void m.warn("(%s) Setup was called while it was already initialized (returned with a no-op)", this.scAudio.getId()) : (m("(%s) Initialized", this.scAudio.getId()), this.controller = this.scAudio.controller, this.protocol = this.scAudio.streamInfo.protocol, void(this.host = S.getUrlHost(this.scAudio.streamInfo.url))) : void m.warn("CanÂ´t initialize when controller is null")
             }
 
             function r() {
