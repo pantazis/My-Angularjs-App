@@ -20,7 +20,7 @@ SC.get("tracks", {
 });
 
 
-//https://api-v2.soundcloud.com/charts?kind=top&genre=soundcloud:genres:ambient&client_id=02gUJC0hH2ct1EGOcYXQIzRFU91c72Ea&limit=20&offset=0&linked_partitioning=1&app_version=1471511869
+/*https://api-v2.soundcloud.com/charts?kind=top&genre=soundcloud:genres:ambient&client_id=02gUJC0hH2ct1EGOcYXQIzRFU91c72Ea&limit=20&offset=0&linked_partitioning=1&app_version=1471511869
 SC.get("charts", {
             kind: "top",
             genre: "soundcloud:genres:ambient",
@@ -29,3 +29,4 @@ SC.get("charts", {
 
 
         })
+*/
