@@ -432,7 +432,7 @@
         var n = {
             oauth_token: void 0,
             baseURL: "https://api-v2.soundcloud.com",
-            connectURL: "//connect.soundcloud.com",
+            connectURL: "//soundcloud.com",
             client_id: void 0,
             redirect_uri: void 0
         };
