@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SoundCloud Token</title>
+</head>
+
+<body>
+    <script>
+        if (window.location.href.indexOf('access_token=') == -1) {
+            window.location.href = 'https://soundcloud.com/connect?client_id=18787aac7eedf1581d75c015c244b525&redirect_uri=https://cdn.rawgit.com/wb9688/soundcloudipy/master/authenticate.html&response_type=token&scope=non-expiring'
+        } else {
+            document.body.innerHTML = window.location.href.split('access_token=')[1].split('&')[0]
+        }
+    </script>
+</body>
+
+</html>
