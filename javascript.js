@@ -1,5 +1,6 @@
 SC.initialize({
     client_id: '7fcf1c871e016ce004ecc1dcbb520d08',
+    client_secret:"f6bbdde1c9668a73c4b17fada76843fc",
     redirect_uri: 'https://pantazis.github.io/My-Angularjs-App/callback'
 });
 
