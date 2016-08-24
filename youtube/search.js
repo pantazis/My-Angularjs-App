@@ -8,7 +8,7 @@ function appendResults(text) {
 }
 
 function makeRequest() {
-    var request = gapi.client.urlshortener.url.get({
+    var = gapi.client.urlshortener.url.get({
         'shortUrl': 'http://goo.gl/fbsS'
     });
     request.then(function (response) {
@@ -22,6 +22,6 @@ gapi.load('client', init);
 
 function init() {
     gapi.client.setApiKey('AIzaSyDadPNzC_v8PZ9Fa8WRNNSa2Wx34LDu5l0');
-    gapi.client.load('urlshortener', 'v1').then(makeRequest);
+    gapi.client.load('youtube', 'v3').then(makeRequest);
 
 }
