@@ -8,9 +8,10 @@ function appendResults(text) {
 }
 
 function makeRequest() {
-    var = gapi.client.urlshortener.url.get({
-        'shortUrl': 'http://goo.gl/fbsS'
-    });
+    var request = gapi.client.YouTube.Search.list('id,snippet', {q: 'dogs', maxResults: 25});
+
+        
+   
     request.then(function (response) {
         appendResults(response.result.longUrl);
     }, function (reason) {
@@ -22,6 +23,6 @@ gapi.load('client', init);
 
 function init() {
     gapi.client.setApiKey('AIzaSyDadPNzC_v8PZ9Fa8WRNNSa2Wx34LDu5l0');
-    gapi.client.load('youtube', 'v3').then(makeRequest);
+    gapi.client.load('YouTube', 'v3').then(makeRequest);
 
 }
