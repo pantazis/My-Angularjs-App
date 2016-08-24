@@ -1,7 +1,8 @@
 /*
 AIzaSyDadPNzC_v8PZ9Fa8WRNNSa2Wx34LDu5l0
 */
-function googleApiClientReady() {
+function handleClientLoad() {
+  
 
     var apiKey = 'AIzaSyDadPNzC_v8PZ9Fa8WRNNSa2Wx34LDu5l0';
 
