@@ -12,11 +12,9 @@ function makeRequest() {
 
         
    
-    request.then(function (response) {
-        appendResults(response.result.longUrl);
-    }, function (reason) {
-        console.log('Error: ' + reason.result.error.message);
-    });
+  request.execute(function(response){
+      console.log(response);
+  })
 }
 
 gapi.load('client', init);
