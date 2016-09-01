@@ -14,7 +14,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
         })
         .state('about', {
             url: "/about",
-            templateUrl: 'views/form.html'
+            templateUrl: 'views/youtube.html'
         });
 });
 
@@ -54,8 +54,45 @@ myApp.controller("DirectiveController", function () {
         });
     };
 });
-myApp.directive("myDirective",function(){
-    return {
-        template: 'hello world'
-    };
+
+myApp.controller("youtubeapi", function () {
+  
+
+
+
+
+
+    googleApiClientReady();
+    
+    
+    var youtube = this;
+    youtube.show =false;
+    
+    
+    youtube.text = "Search Videos";
+    
+    youtube.search = function () {
+        
+        
+    
+        var q = document.getElementById('query').value;
+
+
+       
+        
+        var request = gapi.client.youtube.search.list({
+            q: q,
+            part: 'snippet'
+        });
+        console.log(request);
+        
+
+        
+        request.execute(function (response) {
+            var str = response.result;
+            
+            youtube.Sresults = str.items;
+            youtube.show = true;
+        });
+    }
 });
