@@ -2,11 +2,11 @@
     <div id="buttons">
         <label>
             <input type="text" id="query" value='cats' placeholder="Search" style="font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 14px;padding: 15px;">
-            <button type="submit" class="btn  btn-default" id="search-button" ng-click="youtube.search()"> {{youtube.text}}</button>
+            <button type="submit" class="btn  btn-default" id="search-button" ng-click="youtube.search()">{{youtube.result}}</button>
         </label>
 
-        <div ng-repeat="krop in youtube.Sresults" ng-show="youtube.show" >
-            <div>
+        <div   >ng-repeat="krop in youtube.Sresults"
+            <div> {{youtube.elapsedTime}}
                 <a href="/watch?v=VVXwYTKBB4M">
 
                     <img src="https://i.ytimg.com/vi/VVXwYTKBB4M/hqdefault.jpg" alt="" width="196" height="110">

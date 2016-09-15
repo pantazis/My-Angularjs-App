@@ -55,44 +55,59 @@ myApp.controller("DirectiveController", function () {
     };
 });
 
-myApp.controller("youtubeapi", function () {
-  
-
-
-
-
-
-    googleApiClientReady();
-    
-    
+myApp.controller("youtubeapi", function ($q, $timeout) {
     var youtube = this;
-    youtube.show =false;
-    
-    
-    youtube.text = "Search Videos";
-    
-    youtube.search = function () {
-        
-        
-    
-        var q = document.getElementById('query').value;
+
+    function add(x, y, callB) {
+        $timeout(function () {
+            callB(x + y);
+        }, 5000);
+
+    };
+    var starttime = Date.now();
+
+    youtube.result = add(3, 4, function (result) {
+        callB(x + y);
+        youtube.result = result;
+        youtube.elapsedTime = Date.now() - starttime
 
 
-       
-        
-        var request = gapi.client.youtube.search.list({
-            q: q,
-            part: 'snippet'
-        });
-        console.log(request);
-        
+    });
 
+
+
+
+
+    /*-----------------------------------------------------------------------------------------------------
+googleApiClientReady();
+
+
+var youtube = this;
+youtube.show = false;
+youtube.text = "Search Videos";
+youtube.Sresults = [];
+youtube.search = function () {
+
+
+
+    var q = document.getElementById('query').value;
+
+
+
+
+    var request = gapi.client.youtube.search.list({
+        q: q,
+        part: 'snippet'
+    });
+    
+
+    request.execute(function (response) {
+        var str = response.result;
+
+        youtube.Sresults = str.items;
+        youtube.show = true;
         
-        request.execute(function (response) {
-            var str = response.result;
-            
-            youtube.Sresults = str.items;
-            youtube.show = true;
-        });
-    }
+    });
+}
+-----------------------------------------------------------------------------------------------------*/
 });
