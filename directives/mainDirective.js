@@ -55,59 +55,81 @@ myApp.controller("DirectiveController", function () {
     };
 });
 
-myApp.controller("youtubeapi", function ($q, $timeout) {
+myApp.controller("youtubeapi", function ($q) {
+
+
     var youtube = this;
+    youtube.Sresults = [];
 
-    function add(x, y, callB) {
-        $timeout(function () {
-            callB(x + y);
-        }, 5000);
-
-    };
-    var starttime = Date.now();
-
-    youtube.result = add(3, 4, function (result) {
-        callB(x + y);
-        youtube.result = result;
-        youtube.elapsedTime = Date.now() - starttime
-
-
-    });
+    youtube.search = function () {
+            console.log("hello")
 
 
 
 
-
-    /*-----------------------------------------------------------------------------------------------------
-googleApiClientReady();
-
-
-var youtube = this;
-youtube.show = false;
-youtube.text = "Search Videos";
-youtube.Sresults = [];
-youtube.search = function () {
-
-
-
-    var q = document.getElementById('query').value;
+            var q = document.getElementById('query').value;
 
 
 
 
-    var request = gapi.client.youtube.search.list({
-        q: q,
-        part: 'snippet'
-    });
-    
+            var request = gapi.client.youtube.search.list({
+                q: q,
+                part: 'snippet'
+            });
 
-    request.execute(function (response) {
-        var str = response.result;
 
-        youtube.Sresults = str.items;
-        youtube.show = true;
-        
-    });
-}
------------------------------------------------------------------------------------------------------*/
+            request.execute(function (response) {
+
+                
+                var str = response.result;
+                var promise = asyncGreet(response);
+                promise.then(function (greeting) {
+                    console.log(str.items[0].snippet);
+                    
+                    
+                    
+                        youtube.Sresults = str.items;
+                        youtube.show = true;
+                       
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    },
+                    function (reason) {
+                        alert('Failed: ' + reason);
+                    },
+                    function (update) {
+                        alert('Got notification: ' + update);
+                    });
+
+
+
+
+            })
+        }
+        /*-----------------------------------------------------------------------------------------------------------------*/
+    function asyncGreet(response) {
+        var deferred = $q.defer();
+
+
+        if (typeof response == "object") {
+            deferred.resolve('Hello, ' + name + '!');
+        } else {
+            deferred.reject('Greeting ' + name + ' is not allowed.');
+        }
+
+
+        return deferred.promise;
+    }
+
+
+
+    /*-----------------------------------------------------------------------------------------------------------------*/
+
 });

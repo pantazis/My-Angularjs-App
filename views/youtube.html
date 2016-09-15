@@ -1,22 +1,28 @@
-<div class="row" ng-controller="youtubeapi as youtube">
-    <div id="buttons">
-        <label>
-            <input type="text" id="query" value='cats' placeholder="Search" style="font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 14px;padding: 15px;">
-            <button type="submit" class="btn  btn-default" id="search-button" ng-click="youtube.search()">{{youtube.result}}</button>
-        </label>
+  <div class="container" ng-controller="youtubeapi as youtube">
 
-        <div   >ng-repeat="krop in youtube.Sresults"
-            <div> {{youtube.elapsedTime}}
+        <div class="row" >
+
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+<div id="buttons">
+        <label>
+            <input type="text" id="query" value='cats' placeholder="Search" style="font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 14px;padding: 15px;"/>
+            <button type="submit" class="btn  btn-default" id="search-button" ng-click=" youtube.search()">Search video</button>
+        </label>
+    </div>
+
+        <div ng-repeat="krop in youtube.Sresults">
+            <div>
                 <a href="/watch?v=VVXwYTKBB4M">
 
-                    <img src="https://i.ytimg.com/vi/VVXwYTKBB4M/hqdefault.jpg" alt="" width="196" height="110">
+                    <img ng-src="{{krop.snippet.thumbnails.medium.url}}" width="320" height="180">
 
                 </a>
             </div>
             <div>
-                <h3><a href="/watch?v=VVXwYTKBB4M" >Dayton nd105-4 and ribbon tweeter review</a><span > - Duration: 4:30.</span></h3>
+                <h3><a href="/watch?v=VVXwYTKBB4M" >{{krop.snippet.title}}</a><span > - Duration: 4:30.</span></h3>
                 <div><a href="/channel/UCwfwEKqfTxPtHWuQMlKWwpQ">David Gramblin</a></div>
-                <div>The little Dayton woofer and the same tweeter as the b652 air.</div>
+                <div>{{krop.snippet.description}}</div>
                 <div>
                     <ul>
                         <li>6 months ago</li>
@@ -27,12 +33,10 @@
             </div>
         </div>
 
+   
+            </div>
+        </div>
     </div>
-    <div id="search-container">
-    </div>
-   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="../assets/you-tube-api/auth.js"></script>
-    <script src="../assets/you-tube-api/search.js"></script>
-  
-    <script src="https://apis.google.com/js/client.js"></script>
--->
+
+ 
+
